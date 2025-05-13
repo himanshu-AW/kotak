@@ -63,7 +63,7 @@ const Shortcuts = ({ activeTab, setActiveTab }) => {
       <h3 className="text-3 text-[#00000099] font-medium uppercase  leading-[16px]">
         Shortcuts
       </h3>
-      <div className="pb-4 gap-6 max-w-[288px] h-[144px] mx-auto bg-white rounded-[12px] border-[0.5px] border-[#E3E3E3] shadow-xs duration-300 hover:shadow-md">
+      <div className="pb-4 gap-6 max-w-[288px] h-[144px] mx-auto bg-white rounded-[12px] border-[0.5px] border-[#E3E3E3] shadow-xs duration-300">
         <div className="w-full h-[42px] flex items-center justify-around border-b-[1px] border-[#F0EFEF]">
           {Object.keys(tabData).map((tab) => (
             <div
@@ -148,7 +148,7 @@ const Supports = () => {
 };
 
 const supportsData =[
-  {Icon:IconServiceRequests,text:'Your request',isOpen:"2 Open"},
-  {Icon:IconComplaintQuestion,text:'Riese request or complaint'},
+  {Icon:IconServiceRequests,text:'Your requests',isOpen:"2 Open"},
+  {Icon:IconComplaintQuestion,text:'Raise request or complaint'},
   {Icon:IconBulb,text:'Learn about UPI security tips'},
 ];

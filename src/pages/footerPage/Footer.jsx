@@ -1,4 +1,3 @@
-import React from "react";
 import LargeCard2 from "../../components/LargeCard2";
 import { ImageFooterBgElements, ImageFeedback } from "../../assets/images";
 

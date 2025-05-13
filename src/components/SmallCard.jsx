@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "../styles/main.css";
 import { IconRupee } from "../assets/icons";
 
 function SmallCard({ icon, title, titleInfo, subTitle }) {
 
   return (
-    <div className="card w-[336px] h-[96px]">
+    <div className="card py-4 pl-4 pr-3 w-[336px] h-[96px]">
       <div className="w-[152px] h-[64px] bg-white text-[#00000099]">
-        <h5 className="text-[12px]">{title || "2 bank accounts"}</h5>
+        <h5 className="text-[12px] font-medium leading-[16px] text-[#00000099]">{title || "2 bank accounts"}</h5>
         <h3 className="text-[#000000DE] text-[20px] flex font-bold">
           {/\d+(\.\d+)?\s*(lakh|lac|crore|cr|thousand|hundred|k|rs|rupees|₹)/i.test(
             titleInfo

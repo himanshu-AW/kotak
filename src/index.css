@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+body{
+    background-color: #F7FAFC;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+/* ---------------- nav bar styles ---------------- */
+.header-nav{
+    @apply fixed top-0 w-full min-h-[56px] flex flex-row justify-between items-center bg-white border-b-2 px-[24px] border-gray-100;
+}
+.logo-nav{
+    @apply w-[113px] h-[28px] cursor-pointer ;
+}
+.nav-list-item{
+    @apply w-[48px] h-[48] flex items-center justify-center cursor-pointer;
+}
+
+.nav-list-item-name{
+    @apply w-[32px] h-[32px] rounded-full bg-[#253844] text-[12px] flex items-center justify-center text-white;
+}
+
+/* ---------------side navbar styles ---------------- */
+
+.container-sidenav{
+    @apply w-[212px] mt-14 left-0 h-screen bg-white text-black p-4;
+}
+
+.sidenav-list{
+    @apply space-y-4 w-[134px] ;
+}
+
+.sidenav-list-item{
+    @apply flex items-center gap-2 px-3 py-1 rounded-[16px] cursor-pointer w-fit
+}
+.sidenav-list-item-active{
+    @apply bg-[#FEEAEE] text-[#F23057]
+}
+.sidenav-list-item-normal{
+    @apply text-[#00000099] hover:bg-gray-100
+}
+.sidenav-icon{
+    @apply w-6 h-6;
+}
+.sidenav-text{
+    @apply text-gray-700 text-sm 
+}
+.sidenav-text-active{
+    @apply text-[#F23057] text-sm 
+}
+
+
+/*-------------- common section ---------------- */
+.section{
+    @apply mt-[56px] w-[calc(100%-212px)] flex flex-row justify-between bg-[#F7FAFC] overflow-auto;
+}
+
+
+
+/* ---------------- home screen --------------- */
+.container-home{
+    @apply w-full max-w-[734px] m-auto h-full flex flex-col gap-[24px] p-[24px]
+}
+.last-status{
+    @apply text-[14px] text-[#00000044]
+}
+.sub-container-home{
+    @apply w-full flex flex-col gap-[75px]
+}
+
+.sub-container-sections{
+    @apply w-full flex flex-col gap-6
+}
+
+.sub-container-sections-2{
+    @apply w-full flex gap-3
+}
+
+
+.card{
+    @apply  shadow-sm transition-all hover:shadow-md rounded-[12px] border-[0.5] border-[#E3E3E3] bg-[#FFFFFF] flex items-center justify-between ;
+}

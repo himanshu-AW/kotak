@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { ImageBank2, ImageUpi } from "../../assets/images";
 import {
-  IconControls,
+  IconControls2,
   IconMoneyRequest,
   IconPaymentActivityRupeeArrow,
   IconRightArrow,
 } from "../../assets/icons";
-import "../../styles/main.css";
 import LargeCard2 from "../../components/LargeCard2";
 
 const PaymentsMethod = () => {
@@ -91,7 +90,7 @@ const PaymentsMethod = () => {
               </div>
               <button
                 className={`w-[123px] h-[36px] text-[16px] font-medium leading-[22px] text-center px-x py-[7px] rounded-[20px] border-[0.5px] cursor-pointer transition-all ${
-                  isFocused || amount
+                  amount
                     ? "bg-[#3857FF] border-[#3857FF] text-white"
                     : "bg-[#F0EFEF] border-[#DDDDDD] text-[#00000066]"
                 }`}
@@ -109,12 +108,12 @@ const PaymentsMethod = () => {
           {"Request money"}
         </span>
         <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
-          <IconControls className="inline mr-2" />
+          <IconControls2 className="inline mr-2" />
           {"UPI controls"}
         </span>
       </div>
 
-      <LargeCard2 Icon1={IconRightArrow} title={'See all payment activities'} subTitle={'Send, request, manage payments...'}/>
+      <LargeCard2 Icon1={IconPaymentActivityRupeeArrow} title={'See all payment activities'} subTitle={'Send, request, manage payments...'}/>
     </div>
   );
 };
