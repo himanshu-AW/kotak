@@ -24,7 +24,7 @@ body{
 /* ---------------side navbar styles ---------------- */
 
 .container-sidenav{
-    @apply w-[212px] mt-14 left-0 h-screen bg-white text-black p-4;
+    @apply w-[212px] z-2 fixed top-14 left-0 h-screen bg-white text-black p-4;
 }
 
 .sidenav-list{
@@ -53,14 +53,14 @@ body{
 
 /*-------------- common section ---------------- */
 .section{
-    @apply mt-[56px] w-[calc(100%-212px)] flex flex-row justify-between bg-[#F7FAFC] overflow-auto;
+    @apply mt-[56px] ml-[212px] mr-[336px] w-[calc(100%-212px)] flex flex-row justify-between bg-[#F7FAFC] overflow-auto;
 }
 
 
 
 /* ---------------- home screen --------------- */
 .container-home{
-    @apply w-full max-w-[734px] m-auto h-full flex flex-col gap-[24px] p-[24px]
+    @apply w-full max-w-[684px]  m-auto h-full flex flex-col gap-[24px] pt-6
 }
 .last-status{
     @apply text-[14px] text-[#00000044]
