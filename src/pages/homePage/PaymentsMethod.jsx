@@ -4,7 +4,6 @@ import {
   IconControls2,
   IconMoneyRequest,
   IconPaymentActivityRupeeArrow,
-  IconRightArrow,
 } from "../../assets/icons";
 import LargeCard2 from "../../components/LargeCard2";
 

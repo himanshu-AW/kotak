@@ -79,5 +79,5 @@ body{
 
 
 .card{
-    @apply  shadow-xm transition-all rounded-[12px] border-[0.5] border-[#E3E3E3] bg-[#FFFFFF] flex items-center justify-between ;
+    @apply  shadow-xs transition-all rounded-[12px] border-[0.5] border-[#E3E3E3] bg-[#FFFFFF] flex items-center justify-between ;
 }

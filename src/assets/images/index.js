@@ -16,7 +16,7 @@ export const ImageOffersCard2 = OffersCard2;
 import Alert from './alert.png';
 export const ImageAlert = Alert;
 
-import Bank2 from './bank-2.png';
+import Bank2 from './bank-2.webp';
 export const ImageBank2 = Bank2;
 
 import Bank from './bank.png';
@@ -67,7 +67,7 @@ export const ImageOneView = OneView;
 import Umrela from './umrela.png';
 export const ImageUmrela = Umrela;
 
-import Upi from './upi.png';
+import Upi from './upi.webp';
 export const ImageUpi = Upi;
 
 import User from './user.png';
