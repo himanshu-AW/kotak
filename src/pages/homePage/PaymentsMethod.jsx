@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ImageBank2, ImageUpi } from "../../assets/images";
 import {
   IconControls2,
   IconMoneyRequest,
   IconPaymentActivityRupeeArrow,
+  IconBank1,IconUpi2
 } from "../../assets/icons";
 import LargeCard2 from "../../components/LargeCard2";
 
@@ -41,11 +42,11 @@ const PaymentsMethod = () => {
         <div className="w-[296px] h-[233px] flex flex-col items-center gap-6">
           {activeTab === "upi" ? (
             <div className="flex flex-col items-center gap-4">
-              <img
-                src={ImageUpi}
-                alt="upi"
+              <div
                 className="w-[80px] h-[80px] mx-auto"
-              />
+              >
+              <IconUpi2 className="w-full h-full"/>  
+              </div>
               <div className="flex flex-col items-center">
                 <h2 className="text-[16px] leading-[22px] font-medium text-[#000000DE]">
                   Create UPI ID
@@ -61,11 +62,11 @@ const PaymentsMethod = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center gap-6">
-              <img
-                src={ImageBank2}
-                alt="bank"
+              <div
                 className="w-[80px] h-[80px] mx-auto"
-              />
+              >
+              <IconBank1 className="w-full h-full"/>  
+              </div>
               <div className="relative w-full">
                 <label
                   className={`absolute text-[12px] font-normal bg-white px-1 text-[#3857FF] translate-x-[-50%] left-[50%] ${
