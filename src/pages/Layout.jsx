@@ -12,7 +12,7 @@ const Layout = () => {
           <SideNavbar />
           <Outlet />
         </div>
-        <div className="w-full min-w-[1280px] h-[281px] ">
+        <div className="w-full min-w-[1280px] h-[281px]">
           <Footer />
         </div>
       </main>

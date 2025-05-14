@@ -38,5 +38,3 @@ export { ReactComponent as IconStar } from './star.svg';
 export { ReactComponent as IconUpArrow } from './up-arrow.svg';
 export { ReactComponent as IconUpiActivity } from './upi-activity.svg';
 export { ReactComponent as IconUpi } from './upi.svg';
-export { ReactComponent as IconUpi2 } from './UPI-2.svg';
-export { ReactComponent as IconBank1 } from './bank-1.svg';

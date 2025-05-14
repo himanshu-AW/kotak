@@ -3,7 +3,7 @@ import { ImageFooterBgElements, ImageFeedback } from "../../assets/images";
 
 function Footer() {
   return (
-    <section className="w-full z-1 flex items-center relative bg-[#03111A] min-w-[1280px] h-[281px] shadow-sm hover:shadow-lg">
+    <section className="w-full z-1 bottom-0 flex items-center relative bg-[#03111A] min-w-[1280px] h-[281px] shadow-sm hover:shadow-lg">
       <footer className="z-1 w-[999px] h-full absolute top-0 left-[50%] translate-x-[-50%] overflow-hidden">
         <img
           src={ImageFooterBgElements}

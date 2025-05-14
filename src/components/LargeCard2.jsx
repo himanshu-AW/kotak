@@ -4,7 +4,7 @@ import {IconRightArrow,IconRightArrow2} from '../assets/icons'
  
 function LargeCard2({Icon1,Image, title, subTitle,isFooter=false}) {
   return (
-    <div className={`rounded-[12px] w-[684px] h-[84px] mt-2 flex items-center justify-between p-4 border-[0.5px] ${isFooter? 'bg-[#03111A] border-[#FFFFFF66]':' border-[#E3E3E3] bg-[#FFFFFF]'} shadow-sm  cursor-pointer`}>
+    <div className={`rounded-[12px] w-[684px] h-[84px] mt-2 flex items-center justify-between p-4 border-[0.5px] ${isFooter? 'bg-[#03111A] border-[#FFFFFF66]':' border-[#E3E3E3] bg-[#FFFFFF]'} shadow-xs cursor-pointer`}>
         <div className="pl-1 pb-3">{isFooter?<img src={Image} alt="footer card" className='w-8 h-8 mr-4 mb-1'/>: <Icon1 className="scale-[1.2]"/>}</div>
         <div className="max-w-[584px] w-full mx-atuo">
           <h3 className={`font-medium text-[16px] ${isFooter?'text-white':'text-[#000000DE]'} leading-[22px]`}>{title}</h3>
