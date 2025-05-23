@@ -291,3 +291,9 @@ export const manageChequesData={
   GetStatus:[{title:'See the current status of a cheque',placeholder:'Cheque number',btnLabel:'Submit'}],
   StopCheque:[{title:'Stop an issued cheque from getting cleared',placeholder:'Cheque number',btnLabel:'Submit'}],
 }
+
+export const statementsData = [
+  { month: "Dec 2024" },
+  { month: "Nov 2024" },
+  { month: "Oct 2024" },
+];

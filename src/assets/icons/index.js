@@ -28,6 +28,7 @@ export { ReactComponent as IconInvestmentsFilled } from './investments-filled.sv
 export { ReactComponent as IconInvestments } from './investments.svg';
 export { ReactComponent as IconMoneyRequest } from './money-request.svg';
 export { ReactComponent as IconMoreFilled } from './more-filled.svg';
+export { ReactComponent as IconMoreHorizontal } from './more-horizontal.svg';
 export { ReactComponent as IconMore } from './more.svg';
 export { ReactComponent as IconPaymentActivityRupeeArrow } from './payment_activity-rupee-arrow.svg';
 export { ReactComponent as IconPaymentsFilled } from './payments-Filled.svg';
@@ -40,6 +41,7 @@ export { ReactComponent as IconRupee } from './rupee.svg';
 export { ReactComponent as IconSpotlight } from './spotlight.svg';
 export { ReactComponent as IconStarFilled } from './star-filled.svg';
 export { ReactComponent as IconStar } from './star.svg';
+export { ReactComponent as IconStatement } from './statement.svg';
 export { ReactComponent as IconUpArrow } from './up-arrow.svg';
 export { ReactComponent as IconUpiActivity } from './upi-activity.svg';
 export { ReactComponent as IconUpi } from './upi.svg';

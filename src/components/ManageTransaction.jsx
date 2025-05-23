@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ImageBank2, ImageUpi,ImageCheque,ImageCardonly } from "../assets/images";
 
-const ManageTransaction = () => {
+const ManageTransaction = ({param}) => {
+  // const {Bank,UPI} = params;
+  console.log(param)
   const [activeTab, setActiveTab] = useState("bank");
   const [amount, setAmount] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -30,7 +32,7 @@ const ManageTransaction = () => {
                 : "text-[#A3B1FF]"
             }`}
           >
-            Bank
+          {'Bank'}
           </button>
           <button
             onClick={() => setActiveTab("upi")}
@@ -40,7 +42,7 @@ const ManageTransaction = () => {
                 : "text-[#A3B1FF]"
             }`}
           >
-            UPI
+            {'UPI'}
           </button>
         </div>
 

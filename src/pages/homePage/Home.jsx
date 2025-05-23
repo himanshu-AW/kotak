@@ -1,5 +1,5 @@
 import {ToggleButton,SmallCard,LargeCard,Sepration,OfferCard,LargeCard2,FeaturesCards,ReviewCard,ManageTransaction}from "../../components";
-import {featuresData,reviewData,insuranceData,loanData,bankAccountData,smallCardData,offersCardData,offersCardDataBg} from '../../constants'
+import {featuresData,reviewData,insuranceData,loanData,bankAccountData,smallCardData,offersCardData,offersCardDataBg,sendMoneyData} from '../../constants'
 import HomeQuickActionRightSide from "./HomeQuickActionRightSide";
 import {IconUpArrow,IconRightArrow,IconNote,IconPaymentActivityRupeeArrow,IconMoneyRequest,IconControls2} from '../../assets/icons'
 import {ImageCoins} from '../../assets/images'
@@ -101,7 +101,7 @@ function Home() {
           <div className="sub-container-sections">
             <Sepration textName={"Send money"} />
             <div className="w-full flex gap-[11px] flex-wrap">
-              <ManageTransaction/>
+              <ManageTransaction data={sendMoneyData}/>
               <div className="w-full flex flex-col gap-[27px]">
                 <div className="w-full flex gap-3">
                   <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
