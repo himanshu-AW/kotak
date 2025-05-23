@@ -2,7 +2,7 @@ import React from 'react'
 
 function AccountQuickActions() {
   return (
-    <nav className='max-h-[673px] h-[673px] max-w-[336px] w-[336px] bg-sky-200'>
+    <nav className='hidden xl:flex fixed top-14 bottom-0 right-0 w-84 bg-red-100 flex-col gap-8 z-40'>
     </nav>
   )
 }

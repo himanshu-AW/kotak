@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { NavLink, useLocation } from "react-router-dom";
-import {navList} from '../../constants'
+import {navList} from '../constants'
 
-function SideNavbar() {
+function Navbar() {
   const location = useLocation();
  
   return (
-    <nav className="container-sidenav">
-      <ul className="sidenav-list">
+    <section className="nav ">
+      <ul className="nav-list">
         {navList.map((item) => (
           <li key={item.id}>
             <ListItem
@@ -20,14 +20,14 @@ function SideNavbar() {
           </li>
         ))}
       </ul>
-    </nav>
+    </section>
   );
 }
 
 const ListItem = ({ IconDefault, IconActive, iconName, to, pathname }) => (
-  <NavLink  to={to}  className={() =>`sidenav-list-item ${ pathname ? "sidenav-list-item-active" : "sidenav-list-item-normal" }` }>
-    <span className="sidenav-icon">{pathname ? <IconActive /> : <IconDefault />}</span>
-    <span className={`${pathname ? "sidenav-text-active" : "sidenav-text"}`} > {iconName}</span>
+  <NavLink  to={to}  className={() =>`nav-list-item ${ pathname ? "nav-list-item-active" : "nav-list-item-normal" }` }>
+    <span className="nav-icon">{pathname ? <IconActive /> : <IconDefault />}</span>
+    <span className={`nav-text  ${pathname ? "nav-text-active" : "nav-text-normal"}`} > {iconName}</span>
   </NavLink>
 );
 
@@ -44,6 +44,6 @@ const isActivePath = (itemPath, currentPath) => {
 
 
  
-export default SideNavbar;
+export default Navbar;
 
 

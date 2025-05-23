@@ -1,21 +1,34 @@
 import { Outlet } from "react-router-dom";
-import SideNavbar from "./navbarPages/SideNavbar";
-import Navbar from "./navbarPages/Navbar";
-import Footer from "./footerPage/Footer";
+import Footer from "./Footer";
+import Header from "./Header";
+import Navbar from "./Navbar";
 
 const Layout = () => {
   return (
-    <div className="h-screen w-screen flex p-0 flex-col">
-      <Navbar />
-      <main className="w-full h-full flex flex-col gap-5">
-        <div className="w-full flex justify-between">
-          <SideNavbar />
+    <div className="root">
+
+      <header className="root-header">
+        <Header />
+      </header>
+
+      <div className="root-container">
+
+        <aside className="root-navbar">
+          <Navbar />
+        </aside>
+        {/* <aside className="block lg:hidden">
+        <Navbar />
+      </aside> */}
+
+        <main className="root-main">
           <Outlet />
-        </div>
-        <div className="w-full min-w-[1280px] h-[281px]">
-          <Footer />
-        </div>
-      </main>
+
+          <footer className="root-footer">
+            <Footer />
+          </footer>
+          
+        </main>
+      </div>
     </div>
   );
 };

@@ -3,9 +3,8 @@ import {
   ImageLocker,
   ImageCards,
   ImageMoneyBag,
-  ImageOffersCard1,
-  ImageOffersCard2,
-  ImageCoins,
+  ImageOfferCard1,
+  ImageOfferCard2,
   ImageMonitor,
   ImageBuilding,
   ImageBusiness,
@@ -17,6 +16,8 @@ import {
   ImageCalendar,
   ImageOneView,
   ImageUser,
+  ImageOfferCardBg1,
+  ImageOfferCardBg2,
 } from "../assets/images";
 import {
   IconHome,
@@ -29,6 +30,7 @@ import {
   IconInvestmentsFilled,
   IconMore,
   IconMoreFilled,
+  IconCreditCardCircle,IconInterests,IconExpenseList,
    IconUpArrow, IconDownArrow,IconRightArrow, IconNote 
 } from "../assets/icons";
 
@@ -100,6 +102,16 @@ export const smallCardData = [
     image: ImageMoneyBag,
   },
 ];
+
+export const offersCardData = [
+  {bgColor:'bg-gradient-to-tr from-[#4e47ab] to-[#8657b2]',image:ImageOfferCard1,title:'Increase your credit card limit',description:'Unlock unmatched spending freedom and privileges on your card.',btnLabel:'Get now'},
+  {bgColor:'bg-gradient-to-r from-[#135b47] to-[#3f8674]',image:ImageOfferCard2,title:'Turn big spends into easy EMIs',description:'Manage your card payments effortlessly with flexible EMI options.',btnLabel:'Apply now'},
+]
+
+export const offersCardDataBg = [
+  {image:ImageOfferCardBg1,title:'Increase your credit card limit',description:'Unlock unmatched spending freedom and privileges on your card.',btnLabel:'Get now'},
+  {image:ImageOfferCardBg2,title:'Turn big spends into easy EMIs',description:'Manage your card payments effortlessly with flexible EMI options.',btnLabel:'Apply now'},
+]
 
 export const bankAccountData = [
   {
@@ -254,3 +266,28 @@ export const featuresData = [
   },
   { image: ImageOneView, title: "One view", subTitle: "View your net worth" },
 ];
+
+
+export const accountActivityData = [
+  {icon:IconExpenseList,title:'AMB Non-maintenance', subTitle:'6 hours ago',amount:-100},
+  {icon:IconExpenseList,title:'Debit card PIN regeneration', subTitle:'Yesterday',amount:-400.15},
+  {icon:IconInterests,title:'Interest received', subTitle:'Yesterday',amount:250.15},
+  {icon:IconCreditCardCircle,title:'POS X0051', subTitle:'15 Aug 2023',amount:-12500},
+]
+
+export const linkedDepositsData = [
+  {icon:IconExpenseList,title:'AMB Non-maintenance', subTitle:'6 hours ago',amount:-100},
+  {icon:IconExpenseList,title:'Debit card PIN regeneration', subTitle:'Yesterday',amount:-400.15},
+  {icon:IconInterests,title:'Interest received', subTitle:'Yesterday',amount:250.15},
+  {icon:IconCreditCardCircle,title:'POS X0051', subTitle:'15 Aug 2023',amount:-12500},
+]
+
+export const sendMoneyData={
+  Bank:[{placeholder:'Enter amount',btnLabel:'Select payee'}],
+  UPI:[{title:'Create UPI ID',markdown1:'Make instant money transfers',markdown2:'Pay contact, mobile or UPI ID',btnLabel:'Get started'}],
+}
+
+export const manageChequesData={
+  GetStatus:[{title:'See the current status of a cheque',placeholder:'Cheque number',btnLabel:'Submit'}],
+  StopCheque:[{title:'Stop an issued cheque from getting cleared',placeholder:'Cheque number',btnLabel:'Submit'}],
+}

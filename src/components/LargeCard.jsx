@@ -19,7 +19,7 @@ function LargeCard({
   ).split(".");
 
   return (
-    <Link to={path} className="card pl-3 py-4 pr-4 w-full">
+    <Link to={path} className="card bg-white pl-3 py-4 pr-4 w-full">
       <div className="flex items-center gap-3">
         <img src={Image} alt="money" className="w-[64px] h-[64px]" />
         <div className="flex flex-col gap-2">

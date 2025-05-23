@@ -7,11 +7,8 @@ export const ImageFeedback = Feedback;
 import Home from './Home.png';
 export const ImageHome = Home;
 
-import OffersCard1 from './Offers-card-1.png';
-export const ImageOffersCard1 = OffersCard1;
-
-import OffersCard2 from './Offers-card-2.png';
-export const ImageOffersCard2 = OffersCard2;
+import OfferCardBg1 from './Offer-card-bg-1.png';
+export const ImageOfferCardBg1 = OfferCardBg1;
 
 import Alert from './alert.png';
 export const ImageAlert = Alert;
@@ -28,8 +25,14 @@ export const ImageBuilding = Building;
 import Business from './business.png';
 export const ImageBusiness = Business;
 
+import Cardonly from './cardonly.png';
+export const ImageCardonly = Cardonly;
+
 import Cards from './cards.png';
 export const ImageCards = Cards;
+
+import Cheque from './cheque.png';
+export const ImageCheque = Cheque;
 
 import Coins from './coins.png';
 export const ImageCoins = Coins;
@@ -60,6 +63,15 @@ export const ImageMoneyBag = MoneyBag;
 
 import Monitor from './monitor.png';
 export const ImageMonitor = Monitor;
+
+import OfferCard1 from './offer-card-1.png';
+export const ImageOfferCard1 = OfferCard1;
+
+import OfferCard2 from './offer-card-2.png';
+export const ImageOfferCard2 = OfferCard2;
+
+import OfferCardBg2 from './offer-card-bg-2.jpg';
+export const ImageOfferCardBg2 = OfferCardBg2;
 
 import OneView from './one-view.png';
 export const ImageOneView = OneView;

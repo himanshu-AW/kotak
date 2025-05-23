@@ -1,94 +1,137 @@
 @import "tailwindcss";
 
-body{
-    background-color: #F7FAFC;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
+body {
+  background-color: #f7fafc;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
-/* ---------------- nav bar styles ---------------- */
-.header-nav{
-    @apply fixed top-0 w-full min-h-[56px] flex flex-row justify-between items-center bg-white border-b-2 px-[24px] border-gray-100;
+/* layout styles */
+
+.root {
+  @apply relative min-h-screen flex flex-col;
 }
-.logo-nav{
-    @apply w-[113px] h-[28px] cursor-pointer ;
+.root-header {
+  @apply fixed top-0 left-0 right-0 h-14 z-50 bg-white;
 }
-.nav-list-item{
-    @apply w-[48px] h-[48] flex items-center justify-center cursor-pointer;
+.root-container {
+  @apply flex flex-1;
+}
+.root-navbar {
+  @apply hidden lg:block fixed top-14 bottom-0 left-0 w-[212px] z-40;
+}
+.root-main {
+  @apply z-40 flex-1 mt-14 w-full max-w-screen-lg mx-auto lg:ml-[212px] xl:mr-84;
+}
+.root-footer {
+  @apply h-[281px] z-50;
 }
 
-.nav-list-item-name{
-    @apply w-[32px] h-[32px] rounded-full bg-[#253844] text-[12px] flex items-center justify-center text-white;
+/* ---------------- header styles ---------------- */
+.header {
+  @apply w-full h-full flex flex-row justify-between items-center px-[24px] border-b-1 bg-white border-gray-100;
+}
+.logo-nav {
+  @apply w-[113px] h-[28px] cursor-pointer;
+}
+.header-item {
+  @apply w-[48px] h-[48] flex items-center justify-center cursor-pointer;
 }
 
-/* ---------------side navbar styles ---------------- */
-
-.container-sidenav{
-    @apply w-[212px] z-2 fixed top-14 left-0 h-screen bg-white text-black p-4;
+.header-item-name {
+  @apply w-[32px] h-[32px] rounded-full bg-[#253844] text-[12px] flex items-center justify-center text-white;
 }
 
-.sidenav-list{
-    @apply space-y-4 w-[134px] ;
+/* ---------------navbar styles ---------------- */
+
+.nav {
+  @apply hidden lg:block w-full h-full bg-white p-4;
+}
+.nav-list {
+  @apply hidden lg:block space-y-4 w-[134px];
+}
+.mobile-nav {
+  @apply block lg:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-md bg-black/10 backdrop-blur-md shadow-lg rounded-full px-4 py-2  z-50 border border-white/20;
 }
 
-.sidenav-list-item{
-    @apply flex items-center gap-2 px-3 py-1 rounded-[16px] cursor-pointer w-fit
+.mobile-nav-list {
+  @apply lg:hidden flex justify-between items-center;
 }
-.sidenav-list-item-active{
-    @apply bg-[#FEEAEE] text-[#F23057]
+
+.nav-list-item {
+  @apply flex items-center gap-2 justify-center px-5 py-[6px] lg:px-3 lg:py-1 rounded-full lg:rounded-[16px] cursor-pointer w-fit flex-wrap;
 }
-.sidenav-list-item-normal{
-    @apply text-[#00000099] hover:bg-gray-100
+.nav-list-item-active {
+  @apply bg-[#FEEAEE] text-[#F23057];
 }
-.sidenav-icon{
-    @apply w-6 h-6;
+.nav-list-item-normal {
+  @apply text-[#00000099] hover:bg-gray-100;
 }
-.sidenav-text{
-    @apply text-gray-700 text-sm 
+.nav-icon {
+  @apply w-6 h-6;
 }
-.sidenav-text-active{
-    @apply text-[#F23057] text-sm 
+.nav-text {
+  @apply hidden lg:block text-sm;
 }
+.nav-text-normal {
+  @apply text-gray-700;
+}
+.nav-text-active {
+  @apply text-[#F23057];
+}
+
+/* footer styles */
+
+.footer {
+  @apply w-full flex items-center relative bg-[#03111A] h-full;
+}
+.footer-bg {
+  @apply z-1 h-full absolute top-0 left-0 right-0 overflow-hidden;
+}
+.footer-container {
+  @apply z-2 mx-auto w-full h-full flex justify-center-safe pt-[28px];
+}
+.footer-content {
+  @apply w-full flex justify-center-safe;
+}
+
 
 
 /*-------------- common section ---------------- */
-.section{
-    @apply mt-[56px] ml-[212px] mr-[336px] w-[calc(100%-212px)] flex flex-row justify-between bg-[#F7FAFC] overflow-auto;
+.section {
+  @apply w-full flex justify-between bg-[#F7FAFC] overflow-auto pt-6;
 }
 
+.container {
+  @apply w-full max-w-[684px] m-auto h-full flex flex-col gap-[24px] mb-40;
+}
 
+.sub-container {
+  @apply w-full flex flex-col gap-[75px];
+}
 
 /* ---------------- home screen --------------- */
-.container-home{
-    @apply w-full max-w-[684px]  m-auto h-full flex flex-col gap-[24px] pt-6
-}
-.last-status{
-    @apply text-[14px] text-[#00000044]
-}
-.sub-container-home{
-    @apply w-full flex flex-col gap-[75px]
+.last-status {
+  @apply text-[14px] text-[#00000044];
 }
 
-.sub-container-sections{
-    @apply w-full flex flex-col gap-6
+.sub-container-sections {
+  @apply w-full flex flex-col gap-6;
 }
 
-.sub-container-sections-2{
-    @apply w-full flex gap-3
+.sub-container-sections-2 {
+  @apply w-full flex gap-3;
 }
 
-
-.card{
-    @apply  shadow-xs hover:shadow-md transition-all rounded-[12px] border-[0.5] border-[#E3E3E3] bg-[#FFFFFF] flex items-center justify-between ;
+.card {
+  @apply shadow-xs hover:shadow-md transition-all rounded-[12px] border-[0.5] border-[#E3E3E3] flex items-center justify-between;
 }
-
-
 
 /* loading spinner */
 /* Spinner class if not using Tailwind plugin */
 .loader {
   border: 4px solid #e5e7eb;
-  border-top: 4px solid #3857FF;
+  border-top: 4px solid #3857ff;
   border-radius: 50%;
   width: 36px;
   height: 36px;

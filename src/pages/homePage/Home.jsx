@@ -1,20 +1,19 @@
-import {ToggleButton,SmallCard,LargeCard,Sepration, OffersCards,LargeCard2,FeaturesCards,ReviewCard}from "../../components";
-import {featuresData,reviewData,insuranceData,loanData,bankAccountData,smallCardData} from '../../constants'
+import {ToggleButton,SmallCard,LargeCard,Sepration,OfferCard,LargeCard2,FeaturesCards,ReviewCard,ManageTransaction}from "../../components";
+import {featuresData,reviewData,insuranceData,loanData,bankAccountData,smallCardData,offersCardData,offersCardDataBg} from '../../constants'
 import HomeQuickActionRightSide from "./HomeQuickActionRightSide";
-import PaymentsMethod from "./PaymentsMethod";
-import {IconUpArrow,IconRightArrow,IconNote} from '../../assets/icons'
-import {ImageOffersCard1,ImageOffersCard2,ImageCoins} from '../../assets/images'
+import {IconUpArrow,IconRightArrow,IconNote,IconPaymentActivityRupeeArrow,IconMoneyRequest,IconControls2} from '../../assets/icons'
+import {ImageCoins} from '../../assets/images'
 
 
 function Home() {
 
   return (
     <section className="section">
-      <div className="container-home">
+      <div className="container">
         <h3 className="last-status">
           Last logged on 10 Sep 2019, 6:50 PM (IST)
         </h3>
-        <div className="sub-container-home">
+        <div className="sub-container">
          
           <div className="flex flex-col gap-[11px]">
             <div className="w-[684] flex gap-3 flex-wrap">
@@ -40,15 +39,36 @@ function Home() {
           <div className="sub-container-sections">
             <Sepration textName={"Offers"} />
             <div className="w-[684] flex gap-3 flex-wrap">
-              <OffersCards image={ImageOffersCard1} altText={""} />
-              <OffersCards image={ImageOffersCard2} altText={""} />
-              <div className="flex w-full justify-end">
-                <ToggleButton
-                  text={"See all"}
-                  Icon={IconRightArrow}
-                  onClick={() => {}}
+              {offersCardData.map((item, id) => (
+                <OfferCard
+                  key={id}
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  buttonLabel={item.btnLabel}
+                  bgColor={item.bgColor}
+                  onClick={()=>{}}
                 />
-              </div>
+              ))}
+            </div>
+            <div className="w-[684] flex gap-3 flex-wrap">
+              {offersCardDataBg.map((item, id) => (
+                <OfferCard
+                  key={id}
+                  image={item.image}
+                  title={item.title}
+                  description={item.description}
+                  buttonLabel={item.btnLabel}
+                  onClick={()=>{}}
+                />
+              ))}
+            </div>
+            <div className="flex justify-end">
+              <ToggleButton
+                text={"See all"}
+                Icon={IconUpArrow}
+                onClick={() => {}}
+              />
             </div>
           </div>
 
@@ -68,20 +88,33 @@ function Home() {
                   path={`/home/bank/${item.accountType + "-" + "account"}`}
                 />
               ))}
-            <div className="flex w-full justify-end">
-              <ToggleButton
-                text={"See less"}
-                Icon={ IconUpArrow }
-                onClick={() => {}}
-              />
-            </div>
+              <div className="flex w-full justify-end">
+                <ToggleButton
+                  text={"See less"}
+                  Icon={ IconUpArrow }
+                  onClick={() => {}}
+                />
+              </div>
             </div>
           </div>
 
           <div className="sub-container-sections">
             <Sepration textName={"Send money"} />
-            <div className="w-full flex gap-3 flex-wrap">
-              <PaymentsMethod/>
+            <div className="w-full flex gap-[11px] flex-wrap">
+              <ManageTransaction/>
+              <div className="w-full flex flex-col gap-[27px]">
+                <div className="w-full flex gap-3">
+                  <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
+                    <IconMoneyRequest className="inline mr-2" />
+                    {"Request money"}
+                  </span>
+                  <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
+                    <IconControls2 className="inline mr-2" />
+                    {"UPI controls"}
+                  </span>
+                </div>
+                <LargeCard2  Icon={IconPaymentActivityRupeeArrow} title={"See all payment activities"} subTitle={"Send, request, manage payments..."} />
+              </div>
             </div>
           </div>
 
@@ -160,9 +193,10 @@ function Home() {
               </div>
           </div>
 
-          <div className="sub-container-sections mb-10">
-              <LargeCard2 Icon1={IconNote} title={"Coming soon"} subTitle={'New features getting launched soon.'}/>
+          <div className="sub-container-sections">
+              <LargeCard2 Icon={IconNote} title={"Coming soon"} subTitle={'New features getting launched soon.'}/>
           </div>
+
         </div>
       </div>
 

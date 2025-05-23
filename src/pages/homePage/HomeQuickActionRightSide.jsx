@@ -24,13 +24,13 @@ function HomeQuickActionRightSide() {
   const [activeTab, setActiveTab] = useState("Pay");
 
   return (
-    <nav className=" z-2 h-screen fixed top-[56px] right-0 flex flex-col gap-8 max-w-[336px] w-[336px] bg-white">
+    <aside className="hidden xl:flex fixed top-14 bottom-0 right-0 w-84 bg-white flex-col gap-8 z-40">
       <Notifiactions/>
       <div className="w-[288px] h-[0.5px] bg-[#F0EFEF] mx-auto"></div>
       <Shortcuts activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="w-[288px] h-[0.5px] bg-[#F0EFEF] mx-auto"></div>
       <Supports/>
-    </nav>
+    </aside>
   );
 }
 

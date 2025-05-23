@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { ImageBank2, ImageUpi } from "../../assets/images";
-import {
-  IconControls2,
-  IconMoneyRequest,
-  IconPaymentActivityRupeeArrow,
-} from "../../assets/icons";
-import LargeCard2 from "../../components/LargeCard2";
+import { ImageBank2, ImageUpi,ImageCheque,ImageCardonly } from "../assets/images";
 
-const PaymentsMethod = () => {
+const ManageTransaction = () => {
   const [activeTab, setActiveTab] = useState("bank");
   const [amount, setAmount] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -16,13 +10,17 @@ const PaymentsMethod = () => {
   useEffect(() => {
     const bankImg = new Image();
     const upiImg = new Image();
+    const chequeImg = new Image();
+    const cardImg = new Image();
     bankImg.src = ImageBank2;
     upiImg.src = ImageUpi;
+    chequeImg.src = ImageCheque;
+    cardImg.src = ImageCardonly;
   }, []);
 
   return (
     <div className="flex flex-col gap-4 max-w-[684px] w-full border-[#E3E3E3]">
-      <div className="flex gap-[70px] w-full h-[323px] mx-auto p-[40px] border-[0.5px] border-[#E3E3E3] bg-white shadow-xs hover:shadow-md rounded-[12px] transition-all overflow-hidden">
+      <div className="flex gap-[70px] w-full h-[323px] mx-auto p-10 border-[0.5px] border-[#E3E3E3] bg-white shadow-xs hover:shadow-md rounded-[12px] transition-all overflow-hidden">
         <div className="max-w-[208px] w-full h-full p-4 flex flex-col space-y-2 border-r-[1px] border-[#E3E3E3]">
           <button
             onClick={() => setActiveTab("bank")}
@@ -103,7 +101,7 @@ const PaymentsMethod = () => {
                 />
               </div>
               <button
-                className={`w-[123px] h-[36px] text-[16px] font-medium leading-[22px] text-center px-x py-[7px] rounded-[20px] border-[0.5px] cursor-pointer transition-all ${
+                className={`h-[36px] text-[16px] font-medium leading-[22px] text-center px-4 py-[7px] rounded-[20px] border-[0.5px] cursor-pointer transition-all ${
                   amount
                     ? "bg-[#3857FF] border-[#3857FF] text-white"
                     : "bg-[#F0EFEF] border-[#DDDDDD] text-[#00000066]"
@@ -115,25 +113,8 @@ const PaymentsMethod = () => {
           )}
         </div>
       </div>
-
-      <div className="w-full flex gap-3">
-        <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
-          <IconMoneyRequest className="inline mr-2" />
-          {"Request money"}
-        </span>
-        <span className="bg-[#F0EFEF] border-[0.5px] border-[#DDDDDD] text-[14px] text-[#00000099] leading-[18px] py-1 pl-2 pr-[10px] rounded-[16px] flex items-center justify-center cursor-pointer">
-          <IconControls2 className="inline mr-2" />
-          {"UPI controls"}
-        </span>
-      </div>
-
-      <LargeCard2
-        Icon1={IconPaymentActivityRupeeArrow}
-        title={"See all payment activities"}
-        subTitle={"Send, request, manage payments..."}
-      />
     </div>
   );
 };
 
-export default PaymentsMethod;
+export default ManageTransaction;

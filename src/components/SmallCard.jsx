@@ -5,7 +5,7 @@ import { IconRupee } from "../assets/icons";
 function SmallCard({ icon, title, titleInfo, subTitle }) {
 
   return (
-    <div className="card py-4 pl-4 pr-3 w-[336px] h-[96px]">
+    <div className="card bg-white py-4 pl-4 pr-3 w-[336px] h-[96px]">
       <div className="w-[152px] h-[64px] bg-white text-[#00000099]">
         <h5 className="text-[12px] font-medium leading-[16px] text-[#00000099]">{title || "2 bank accounts"}</h5>
         <h3 className="text-[#000000DE] text-[20px] flex font-bold">
